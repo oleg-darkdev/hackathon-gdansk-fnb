@@ -1,10 +1,11 @@
 import { get } from 'svelte/store';
-import themeStore, { setTheme } from '$components/SvelteThemes/index';
+import { themeStore, setTheme } from '$shared';
 
-export const toggleTheme = () => {
+const toggleTheme = () => {
 	if (get(themeStore).theme === 'light') {
 		setTheme('dark');
 	} else {
 		setTheme('light');
 	}
 };
+export default toggleTheme;

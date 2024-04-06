@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { languages, referenceLanguage } from '@inlang/sdk-js';
-	import { replaceLocaleInUrl } from '$utils';
+	import { replaceLocaleInUrl } from '$shared';
 </script>
 
 {#each languages as lang}

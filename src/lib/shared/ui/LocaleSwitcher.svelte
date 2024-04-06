@@ -3,7 +3,8 @@
 	import { page } from '$app/stores';
 	import { i, language, languages, switchLanguage } from '@inlang/sdk-js';
 
-	import ArrowPathIcon from '$icons/arrow-path.svg?component';
+	// import ArrowPathIcon from '$icons/arrow-path.svg?component';
+	// <ArrowPathIcon width="20" height="20" stroke-width="1.75" aria-hidden />l
 
 	let lang = $page.params.lang;
 	let formElement: HTMLFormElement;
@@ -62,7 +63,6 @@
 				{i('locales.update_button')}
 			</span>
 
-			<ArrowPathIcon width="20" height="20" stroke-width="1.75" aria-hidden />
 		</button>
 	</noscript>
 </form>

@@ -1,5 +1,5 @@
 import { redirect } from '@sveltejs/kit';
-import { replaceLocaleInUrl } from '$utils';
+import { replaceLocaleInUrl } from '$shared';
 
 export const actions = {
 	setTheme: async ({ url, cookies, params }) => {

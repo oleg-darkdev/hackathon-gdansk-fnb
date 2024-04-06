@@ -1,10 +1,8 @@
 <!-- copied from https://github.com/beynar/svelte-themes/blob/main/src/lib/SvelteTheme.svelte -->
 <script lang="ts">
 	import { browser } from '$app/environment';
-	import { colorSchemes, MEDIA } from './constants';
-	import { disableAnimation, getSystemTheme, getTheme } from './helpers';
-	import themeStore, { setTheme } from './index';
-	import ThemeScript from './ThemeScript.svelte';
+	import { ThemeScript, themeStore, setTheme, colorSchemes, MEDIA, disableAnimation, getSystemTheme, getTheme  } from '$shared';
+	
 	/** Forced theme name for the current page */
 	export let forcedTheme: string | undefined = undefined;
 	/** Disable all CSS transitions when switching themes */

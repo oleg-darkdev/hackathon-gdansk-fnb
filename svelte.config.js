@@ -16,11 +16,14 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		alias: {
-			$actions: 'src/lib/actions',
 			$components: 'src/lib/components',
-			$icons: 'src/lib/icons',
-			$stores: 'src/lib/stores',
-			$utils: 'src/lib/utils'
+			$icons: 'src/static/icons',
+			$images: 'src/static/images',
+			$stores: 'src/lib/shared/stores',
+			$shared: 'src/lib/shared',
+			// $svelteThemes: 'src/lib/shared/svelteThemes',
+			// svelteThemes
+			$actions: 'src/lib/shared/actions'
 		}
 	},
 

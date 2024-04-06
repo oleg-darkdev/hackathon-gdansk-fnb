@@ -3,8 +3,7 @@
 	import { page } from '$app/stores';
 	import { draw } from 'svelte/transition';
 	import { i } from '@inlang/sdk-js';
-	import { toggleTheme } from '$utils';
-	import themeStore from '$components/SvelteThemes/index';
+	import { themeStore , toggleTheme } from '$shared';
 
 	const themes = ['dark', 'light'];
 

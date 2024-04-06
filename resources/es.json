@@ -1,17 +1,17 @@
 {
-	"welcome": "Bienvenido a SvelteKit",
-	"description": "Visita <a href=\"https://kit.svelte.dev\">kit.svelte.dev</a> para leer la documentación",
-	"locales": {
-		"description": "Cambiar idioma",
-		"en": "English",
-		"es": "Español"
-	},
-	"themes": {
-		"dark": "Oscuro",
-		"light": "Claro",
-		"description": {
-			"dark": "Cambiar al tema oscuro",
-			"light": "Cambiar al tema claro"
-		}
-	}
+  "welcome": "Bienvenido a SvelteKit",
+  "description": "Visita <a href=\"https://kit.svelte.dev\">kit.svelte.dev</a> para leer la documentación",
+  "locales": {
+    "description": "Cambiar idioma",
+    "en": "English",
+    "es": "Español"
+  },
+  "themes": {
+    "dark": "Oscuro",
+    "light": "Claro",
+    "description": {
+      "dark": "Cambiar al tema oscuro",
+      "light": "Cambiar al tema claro"
+    }
+  }
 }

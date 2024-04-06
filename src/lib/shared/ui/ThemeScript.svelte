@@ -1,6 +1,6 @@
 <!-- copied from https://github.com/beynar/svelte-themes/blob/main/src/lib/ThemeScript.svelte -->
 <script lang="ts">
-	import { MEDIA } from './constants';
+	import { MEDIA } from '$shared';
 	export let forcedTheme: string;
 	export let storageKey: string;
 	export let attribute: string;

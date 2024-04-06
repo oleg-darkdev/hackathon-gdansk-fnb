@@ -1,14 +1,23 @@
 <script lang="ts">
 	import '../app.postcss';
 
-	import Header from '$components/Header.svelte';
-	import SvelteTheme from '$components/SvelteThemes/SvelteTheme.svelte';
+	import { language } from '@inlang/sdk-js';
+	import {ThemeSwitcher, SvelteTheme, LocaleSwitcher} from '$shared/';
 
 	export let data;
 </script>
 
-<Header />
+	<!-- <a href="/{language}">
+		<h1>Home</h1>
+	</a> -->
+
+	<LocaleSwitcher />
+
+	<ThemeSwitcher />
 
 <slot />
 
 <SvelteTheme attribute="data-theme" />
+
+
+style

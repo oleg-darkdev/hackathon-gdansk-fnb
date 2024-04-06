@@ -15,8 +15,6 @@ export interface ThemeStore {
 	systemTheme?: 'dark' | 'light';
 }
 
-export const setTheme = (theme: string): void =>
-	themeStore.update((store) => ({ ...store, theme }));
 const themeStore = writable<ThemeStore>({
 	themes: [],
 	forcedTheme: undefined,
