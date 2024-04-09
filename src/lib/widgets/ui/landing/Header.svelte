@@ -11,12 +11,12 @@
 	<div class="opening-hours">
 		Gorącą zupę rozdajemy o 12:00.
 		<br />
-		<a class="text-black" href="https://maps.app.goo.gl/awbGNCfjkpkRVQRXA">Przy fontannie Neptuna</a
+		<a class=" hover:border-b-2 hover:border-black text-black" href="https://maps.app.goo.gl/awbGNCfjkpkRVQRXA" target="_blank">Przy fontannie Neptuna</a
 		>
 	</div>
 
 	<div class="location flex flex-col items-center justify-center">
-		<p class="w-full text-center">fnbgdansk@zieloni.pl</p>
+		<p class="w-full text-center hover:delay-550 hover:-translate-y-1 hover:scale-105  hover:transition hover:duration-1000 hover:ease-in-out  ">fnbgdansk@zieloni.pl</p>
 		<div class="mx-auto flex w-full max-w-[230px] flex-row justify-between">
 			<SocialLink
 				bg={'background-primary'}
