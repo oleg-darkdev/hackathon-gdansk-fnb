@@ -14,5 +14,8 @@
 			{data.desc}
 		</p>
 	</div>
-	<img src="./images/news/{data.img}" class="max-h-[450px] min-h-[400px] grayscale filter" alt="" />
+	<div
+		style="background-image: url('./images/news/{data.img}');  background-position: center; background-repeat: no-repeat; background-size: cover;"
+		class="-mt-4 max-h-[450px] min-h-[400px] w-full overflow-hidden grayscale filter"
+	/>
 </div>
