@@ -44,8 +44,6 @@
 		"papercss": "^1.9.2",
 		"spaper": "^1.4.0"
 	},
-	"engines": {
-		"node": "18.17.0"
-	},
+	"engines": {"npm":"10.2.4","node":"v18.19.1"},
 	"type": "module"
 }
