@@ -21,6 +21,7 @@ import toggleTheme from './utils/toggleTheme.ts';
 import FullBtn from './ui/FullBtn.svelte';
 import EmailLink from './ui/EmailLink.svelte';
 import SocialLink from './ui/SocialLink.svelte';
+import DonateBtn from './ui/DonateBtn.svelte';
 
 // data
 import magnets from './data/magnets';
@@ -30,6 +31,7 @@ import navLinks from './data/navLinks';
 
 export {
 	magnets,
+	DonateBtn,
 	SocialLink,
 	navLinks,
 	FullBtn,
