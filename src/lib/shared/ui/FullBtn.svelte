@@ -1,4 +1,8 @@
-<a class="menu-download">Download the menu</a>
+<script>
+	export let text;
+</script>
+
+<button class="menu-download">{text}</button>
 
 <style>
 	.menu-download {
