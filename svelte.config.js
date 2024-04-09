@@ -24,8 +24,6 @@ const config = {
 			$images: 'src/static/images',
 			$stores: 'src/lib/shared/stores',
 			$shared: 'src/lib/shared',
-			// $svelteThemes: 'src/lib/shared/svelteThemes',
-			// svelteThemes
 			$actions: 'src/lib/shared/actions'
 		}
 	},

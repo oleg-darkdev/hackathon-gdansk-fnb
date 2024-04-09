@@ -1,6 +1,4 @@
 <script>
-	// import { i } from '@inlang/sdk-js';
-	// import {HeadHrefLangs} from '$shared';
 	// import { Hero } from 'spaper';
 
 	import { Carousel, Header, Navigation, Footer } from '$widgets';
@@ -40,11 +38,12 @@
 
 <svelte:head>
 	<title>Food Not Bombs - Gdans</title>
-	<!-- <HeadHrefLangs /> -->
+	<HeadHrefLangs />
 </svelte:head>
-<!-- `
+`
 <h1 class="text-5xl font-extralight">{i('welcome')}</h1>
-<p>{@html i('description')}</p>` -->
+<p>{@html i('description')}</p>
+`
 
 <Header />
 
