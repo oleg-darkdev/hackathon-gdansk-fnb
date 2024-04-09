@@ -41,7 +41,9 @@
 		"vitest": "^0.31.0"
 	},
 	"dependencies": {
-		"@neoconfetti/svelte": "^1.0.0"
+		"@neoconfetti/svelte": "^1.0.0",
+		"papercss": "^1.9.2",
+		"spaper": "^1.4.0"
 	},
 	"type": "module"
 }

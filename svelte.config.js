@@ -16,7 +16,10 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		alias: {
-			$components: 'src/lib/components',
+			$entities: 'src/lib/entities',
+			$features: 'src/lib/features',
+			$processes: 'src/lib/processes',
+			$widgets: 'src/lib/widgets',
 			$icons: 'src/static/icons',
 			$images: 'src/static/images',
 			$stores: 'src/lib/shared/stores',
