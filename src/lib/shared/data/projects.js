@@ -14,11 +14,11 @@ const projects = [
 		desc: 'Libertarian educational boardgames',
 		link: '/'
 	},
-	{
-		title: 'Anarchistyczny Czarny Krzyż',
-		desc: 'Międzynarodowa organizacja pomocy więźniom politycznym oraz osobom represjonowanym za działalność antyrządową, antyautorytarną, bądź polityczno-społeczną.',
-		link: 'https://www.ack.org.pl/'
-	},
+	// {
+	// 	title: 'Anarchistyczny Czarny Krzyż',
+	// 	desc: 'Międzynarodowa organizacja pomocy więźniom politycznym oraz osobom represjonowanym za działalność antyrządową, antyautorytarną, bądź polityczno-społeczną.',
+	// 	link: 'https://www.ack.org.pl/'
+	// },
 		{
 		title: '',
 		desc: '',
