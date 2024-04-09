@@ -47,7 +47,7 @@
 		<a name="news" />
 
 		<section class="news w-full">
-			<h3>News</h3>
+			<h3>Aktualności</h3>
 
 			{#each visibleData as data (data.id)}
 				<NewsCard {data} />
@@ -62,30 +62,30 @@
 				{/if}
 			</div>
 		</section>
-		<section class="support">
+		<section class="support pb-4">
 			<a name="support" />
 
-			<h3>Support US</h3>
-			<h4 class="mb-2 mt-4 px-2">Wspieraj nas - kupując nasze drewniane magnesy na lodówkę!</h4>
+			<h3 class='lg:-mt-8 xl:-mt-8'>Wspieraj nas</h3>
+			<h4 class="mb-2 px-2">Wspieraj nas - kupując nasze drewniane magnesy na lodówkę!</h4>
 
 			{#each visibleMagnets as magnet}
 				<MagnetCard {magnet} />
 			{/each}
-
-			<DarkDevCard />
 		</section>
 		<section class="other-projects">
 			<a name="projects" />
-			<h3>Other projects</h3>
-			{#each projects as progect}
-				<ProgectCard {progect} />
+			<h3>Inne projekty</h3>
+			{#each projects as progectData}
+				<ProgectCard {progectData} />
 			{/each}
+
+			<DarkDevCard />
 		</section>
 
 		<section class="team">
 			<a name="team" />
 
-			<h3>Our team</h3>
+			<h3>Nasz zespół</h3>
 
 			<!-- {#each magnets as magnet}
 				<MagnetCard {magnet} />
@@ -113,6 +113,12 @@
 		}
 	}
 
+	@media (max-width: 550px) {
+		h3 {
+			text-align: center;
+		}
+	}
+
 	.menu {
 		border: 6px solid #04110f;
 		border-width: 0 6px 6px;
@@ -132,7 +138,7 @@
 		.menu .other-projects {
 			grid-column: 4/5;
 			grid-row: 3/5;
-			align-self: flex-start;
+			align-self: flex-end;
 		}
 		.menu .team {
 			grid-column: 1/4;
@@ -166,12 +172,6 @@
 		}
 	}
 
-	.other-projects {
-		padding-bottom: 1rem;
-	}
-	.other-projects .item {
-		padding: 1rem 2rem;
-	}
 	.other-projects h3 {
 		margin-bottom: 0.8rem;
 	}
@@ -180,7 +180,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		padding-bottom: 1.5rem;
+		/* padding-bottom: 1.5rem; */
 	}
 	.support h3 {
 		width: 100%;
@@ -210,7 +210,7 @@
 			transform: translate(-1rem, -1rem) rotate(-180deg);
 			width: calc(100%);
 			height: calc(100% + 2rem);
-			padding-bottom: 2rem;
+			/* padding-bottom: 2rem; */
 			box-shadow: 0 -6px 0 0 #333, 0 6px 0 0 #333, -6px 0 0 0 #04110f;
 			text-align: right;
 		}
