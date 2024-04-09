@@ -4,14 +4,10 @@
 
 <div class="legend">
 	{#each links as link, i}
-		<a href={link.link}>
+		<a class='' href={link.link}>
 			<div class="legend__item"><i>{i + 1}</i><span >{link.title}</span></div>
 		</a>
 	{/each}
-	<!-- <div class="legend__item"><i>E</i><span>Eggs</span></div>
-	<div class="legend__item"><i>W</i><span>Wheat</span></div>
-	<div class="legend__item"><i>D</i><span>Dairy</span></div>
-	<div class="legend__item"><i>S</i><span>Seafood</span></div> -->
 </div>
 
 <style>
