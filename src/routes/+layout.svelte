@@ -2,12 +2,8 @@
 	import '../app.postcss';
 	import 'papercss/dist/paper.min.css';
 
-	export let data;
+	// export let data;
 </script>
-
-<a href="/{language}">
-	<h1>Home</h1>
-</a>
 
 
 <div class="body">
