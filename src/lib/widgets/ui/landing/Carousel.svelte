@@ -1,21 +1,20 @@
 <script>
-	import { i } from '@inlang/sdk-js';
-	// import {HeadHrefLangs} from '$shared';
 	import { Carousel, CarouselItem, Hero } from 'spaper';
+
+	const data = [
+		'Działamy na terenie Gdańska od 2004 roku.',
+		'Przygotowaliśmy ponad 7000 litrów zupy i 2000 litrów herbaty.',
+		'Nasz zespół składa się z osób różnych narodowości.',
+		'Możesz wesprzeć nasze działania w kolejnym bloku.'
+	];
 </script>
 
-<svelte:head>
-	<title>SvelteKit + TypeScript + TailwindCSS starter</title>
-	<!-- <HeadHrefLangs /> -->
-</svelte:head>
-<!-- `
-<h1 class="text-5xl font-extralight">{i('welcome')}</h1>
-<p>{@html i('description')}</p>` -->
-
-<section>
-	<Carousel bullets={false} interval={1400}>
-		<CarouselItem>
-			<Hero title="Hey there!" />
-		</CarouselItem>
+<div class="p-10">
+	<Carousel bullets={false} interval={1800}>
+		{#each data as text}
+			<CarouselItem style="">
+				<Hero style=" height:480px;" title={text} />
+			</CarouselItem>
+		{/each}
 	</Carousel>
-</section>
+</div>
