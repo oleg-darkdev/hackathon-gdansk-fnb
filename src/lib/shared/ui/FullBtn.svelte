@@ -2,10 +2,10 @@
 	export let text;
 </script>
 
-<button class="menu-download background-primary  hover:bg-neutral-200 text-primary">{text}</button>
+<button class="-mt-20 lg:mt-0 xl:mt-0 md:mt-0 big-btn background-primary  hover:bg-neutral-200 text-primary">{text}</button>
 
 <style>
-	.menu-download {
+	.big-btn {
 		display: block;
 		text-align: center;
 		text-transform: uppercase;
@@ -16,8 +16,10 @@
 	}
 	
 	@media (min-width: 550px) {
-		.menu-download {
+		.big-btn {
 			padding: 2rem 4rem;
 		}
 	}
+
+	
 </style>
