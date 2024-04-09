@@ -26,10 +26,12 @@ import SocialLink from './ui/SocialLink.svelte';
 import magnets from './data/magnets';
 import news from './data/news';
 import projects from './data/projects';
+import navLinks from './data/navLinks';
 
 export {
 	magnets,
 	SocialLink,
+	navLinks,
 	FullBtn,
 	EmailLink,
 	news,
