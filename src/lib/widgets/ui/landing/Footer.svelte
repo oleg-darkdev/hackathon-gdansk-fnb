@@ -2,7 +2,6 @@
 	import { EmailLink, SocialLink } from '$shared';
 </script>
 
-
 <footer class="justiy-between flex flex-wrap items-center">
 	<a name="contact" />
 
@@ -28,6 +27,11 @@
 		footer p {
 			flex: 1;
 			margin: 0;
+		}
+	}
+	@media (max-width: 550px) {
+		footer p {
+			text-align: center;
 		}
 	}
 </style>
