@@ -1,16 +1,20 @@
 <script>
-	import {} from 'spaper';
-
 	export let progectData;
 </script>
 
-<div class="item">
-	<div class="item__desc">
-		<div class="item__name">Hummus &amp; Tortilla Chips</div>
-		<div class="item__price">$5.5</div>
-		<div class="item__calories">333 calories</div>
+<a class="mx-4 mb-2 w-full px-10" target="_blank" href={progectData.link}>
+	<div
+		style="padding: 0 2rem;"
+		class="hover:delay-550 hover:background-primary hover:translate-x-2 hover:scale-100 hover:transition hover:duration-1000 hover:ease-in-out"
+	>
+		<div class="">
+			<h4 class="card-title text-primary">{progectData.title}</h4>
+			<p class="text-primary card-text">
+				{progectData.desc}
+			</p>
+		</div>
 	</div>
-</div>
+</a>
 
 <style>
 </style>
