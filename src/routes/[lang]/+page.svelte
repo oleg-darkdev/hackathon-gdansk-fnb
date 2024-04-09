@@ -1,23 +1,32 @@
 <script>
-	import { i } from '@inlang/sdk-js';
+	// import { i } from '@inlang/sdk-js';
 	// import {HeadHrefLangs} from '$shared';
+	// import { Hero } from 'spaper';
 
 	import { Carousel, Header, Navigation, Footer } from '$widgets';
-	import { magnets, news, projects, FullBtn, navLinks as links } from '$shared';
-	import { ProgectCard, MagnetCard, NewsCard, DarkDevCard } from '$entities';
+	import { magnets, news, projects, FullBtn, navLinks as links, DonateBtn } from '$shared';
+	import { ProgectCard, MagnetCard, NewsCard, DarkDevCard, DonateBlock } from '$entities';
 
-	let visibleData = news.slice(0, 5);
-	let visibleMagnets = magnets.slice(0, 4);
-	let currentIndex = 5;
-	const blockSize = 4;
+	// news
+	let visibleNews = news.slice(0, 4);
+	let currentIndex = 4;
+	const blockSize = 3;
 
+	// magnets
 	let currentIndexMagnet = 4;
 	const blockSizeMagnets = 2;
+	let visibleMagnets = magnets.slice(0, 4);
 
-	let hideBtn = true;
+	let hideMoreBtn = true;
+
+	// donate
+	const donate = [3, 5, 15, 20, 30, 50, 100];
+	let donateBtnPress = false;
+
 	function loadMore() {
+		// news
 		let newsData = news.slice(currentIndex, currentIndex + blockSize);
-		visibleData = [...visibleData, ...newsData];
+		visibleNews = [...visibleNews, ...newsData];
 		currentIndex += blockSize;
 
 		// magnets
@@ -25,7 +34,7 @@
 		visibleMagnets = [...visibleMagnets, ...magnetsData];
 		currentIndexMagnet += blockSizeMagnets;
 
-		if (news.length < visibleData.length + 2) hideBtn = false;
+		if (news.length < visibleNews.length + 2) hideMoreBtn = false;
 	}
 </script>
 
@@ -37,8 +46,6 @@
 <h1 class="text-5xl font-extralight">{i('welcome')}</h1>
 <p>{@html i('description')}</p>` -->
 
-<!-- <Carousel /> -->
-
 <Header />
 
 <main>
@@ -49,7 +56,9 @@
 		<section class="news w-full">
 			<h3>Aktualności</h3>
 
-			{#each visibleData as data (data.id)}
+			<Carousel />
+
+			{#each visibleNews as data (data.id)}
 				<NewsCard {data} />
 			{/each}
 
@@ -57,15 +66,15 @@
 				on:click={loadMore}
 				class="hover:delay-550 m-4 flex min-h-[350px] max-w-sm items-center hover:-translate-y-1 hover:scale-105 hover:transition hover:duration-1000 hover:ease-in-out"
 			>
-				{#if hideBtn}
+				{#if hideMoreBtn}
 					<FullBtn on:click={loadMore} text="Pokaż więcej newsów" />
 				{/if}
 			</div>
 		</section>
 		<section class="support pb-4">
-			<a name="support" />
+			<!-- <a name="" /> -->
 
-			<h3 class='lg:-mt-8 xl:-mt-8'>Wspieraj nas</h3>
+			<h3 class="">Wspieraj nas</h3>
 			<h4 class="mb-2 px-2">Wspieraj nas - kupując nasze drewniane magnesy na lodówkę!</h4>
 
 			{#each visibleMagnets as magnet}
@@ -83,14 +92,16 @@
 		</section>
 
 		<section class="team">
-			<a name="team" />
+			<a name="support" />
 
-			<h3>Nasz zespół</h3>
-
-			<!-- {#each magnets as magnet}
-				<MagnetCard {magnet} />
-			{/each} -->
-			<!-- <FullBtn /> -->
+			<h3>Wspieraj nas</h3>
+			{#if !donateBtnPress}
+				{#each donate as donateText}
+					<DonateBtn text={donateText} bind:donateBtnPress />
+				{/each}
+			{:else}
+				<DonateBlock />
+			{/if}
 		</section>
 	</div>
 </main>
