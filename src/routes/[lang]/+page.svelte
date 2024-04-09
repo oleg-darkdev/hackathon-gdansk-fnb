@@ -1,37 +1,36 @@
 <script>
 	import { i } from '@inlang/sdk-js';
 	// import {HeadHrefLangs} from '$shared';
+
 	import { Carousel, Header, Navigation, Footer } from '$widgets';
-	import { magnets, news, projects, FullBtn } from '$shared';
+	import { magnets, news, projects, FullBtn, navLinks as links } from '$shared';
 	import { ProgectCard, MagnetCard, NewsCard, DarkDevCard } from '$entities';
 
-	const links = [
-		{
-			title: 'News',
-			link: '#news'
-		},
-		{
-			title: 'Other projects',
-			link: '#projects'
-		},
-		{
-			title: 'Support us',
-			link: '#support'
-		},
-		{
-			title: 'Our team',
-			link: '#support'
-		},
-		{
-			title: 'Contact',
-			link: '#contact'
-		}
-	];
-	// import {} from 'spaper';
+	let visibleData = news.slice(0, 5);
+	let visibleMagnets = magnets.slice(0, 4);
+	let currentIndex = 5;
+	const blockSize = 4;
+
+	let currentIndexMagnet = 4;
+	const blockSizeMagnets = 2;
+
+	let hideBtn = true;
+	function loadMore() {
+		let newsData = news.slice(currentIndex, currentIndex + blockSize);
+		visibleData = [...visibleData, ...newsData];
+		currentIndex += blockSize;
+
+		// magnets
+		let magnetsData = magnets.slice(currentIndexMagnet, currentIndexMagnet + blockSizeMagnets);
+		visibleMagnets = [...visibleMagnets, ...magnetsData];
+		currentIndexMagnet += blockSizeMagnets;
+
+		if (news.length < visibleData.length + 2) hideBtn = false;
+	}
 </script>
 
 <svelte:head>
-	<title>SvelteKit + TypeScript + TailwindCSS starter</title>
+	<title>Food Not Bombs - Gdans</title>
 	<!-- <HeadHrefLangs /> -->
 </svelte:head>
 <!-- `
@@ -45,15 +44,35 @@
 <main>
 	<Navigation {links} />
 	<div class="menu">
+		<a name="news" />
+
 		<section class="news w-full">
 			<h3>News</h3>
-			<a name="news" />
 
-			<!-- <div class="flex w-full flex-row flex-wrap p-2"> -->
-				{#each news as data}
-					<NewsCard {data} />
-				{/each}
-			<!-- </div> -->
+			{#each visibleData as data (data.id)}
+				<NewsCard {data} />
+			{/each}
+
+			<div
+				on:click={loadMore}
+				class="hover:delay-550 m-4 flex min-h-[350px] max-w-sm items-center hover:-translate-y-1 hover:scale-105 hover:transition hover:duration-1000 hover:ease-in-out"
+			>
+				{#if hideBtn}
+					<FullBtn on:click={loadMore} text="Pokaż więcej newsów" />
+				{/if}
+			</div>
+		</section>
+		<section class="support">
+			<a name="support" />
+
+			<h3>Support US</h3>
+			<h4 class="mb-2 mt-4 px-2">Wspieraj nas - kupując nasze drewniane magnesy na lodówkę!</h4>
+
+			{#each visibleMagnets as magnet}
+				<MagnetCard {magnet} />
+			{/each}
+
+			<DarkDevCard />
 		</section>
 		<section class="other-projects">
 			<a name="projects" />
@@ -61,18 +80,6 @@
 			{#each projects as progect}
 				<ProgectCard {progect} />
 			{/each}
-		</section>
-		<section class="support">
-			<a name="support" />
-
-			<h3>Support US</h3>
-	<h4 class='px-2 mb-2 mt-4'>Wspieraj nas - kupując nasze drewniane magnesy na lodówkę!</h4>
-
-			{#each magnets as magnet}
-				<MagnetCard {magnet} />
-			{/each}
-
-			<DarkDevCard />
 		</section>
 
 		<section class="team">
@@ -83,7 +90,7 @@
 			<!-- {#each magnets as magnet}
 				<MagnetCard {magnet} />
 			{/each} -->
-			<FullBtn />
+			<!-- <FullBtn /> -->
 		</section>
 	</div>
 </main>
@@ -91,23 +98,6 @@
 <Footer />
 
 <style>
-	/* * {
-		box-sizing: border-box;
-	} */
-
-	/* body {
-		background: #e2dccc;
-		font-family: 'Mclaren', sans-serif;
-		font-weight: 300;
-		line-height: 1.2;
-		padding: 1rem;
-	}
-	@media (min-width: 880px) {
-		body {
-			padding: 3rem;
-		}
-	} */
-
 	h3 {
 		letter-spacing: 0.2rem;
 		padding: 1rem 2rem;
@@ -121,34 +111,6 @@
 		h3 {
 			font-size: 2.5rem;
 		}
-	}
-
-	span.allergen {
-		display: inline-block;
-		width: 30px;
-		height: 30px;
-		text-align: center;
-		font: 800 0.8rem Syncopate;
-		padding-top: 7px;
-		color: #e2dccc;
-		background: #00acc1;
-		border: 2px solid #04110f;
-		margin-top: 4px;
-	}
-	span.allergen:not(:first-child) {
-		margin-left: -2px;
-	}
-	span.allergen.eggs {
-		background: #931a47;
-	}
-	span.allergen.wheat {
-		background: #e88c30;
-	}
-	span.allergen.dairy {
-		background: #009688;
-	}
-	span.allergen.sea {
-		background: #ca3101;
 	}
 
 	.menu {
@@ -169,6 +131,8 @@
 		}
 		.menu .other-projects {
 			grid-column: 4/5;
+			grid-row: 3/5;
+			align-self: flex-start;
 		}
 		.menu .team {
 			grid-column: 1/4;
@@ -178,8 +142,6 @@
 		}
 		.menu .support {
 			grid-column: 4/5;
-			grid-row: 3/5;
-			align-self: flex-start;
 		}
 		.menu .menu-download {
 			grid-column: 4/5;
@@ -218,7 +180,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		/* padding-bottom: 1.5rem; */
+		padding-bottom: 1.5rem;
 	}
 	.support h3 {
 		width: 100%;
