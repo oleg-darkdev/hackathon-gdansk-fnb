@@ -3,7 +3,7 @@
 </script>
 
 <div
-	class="hover:delay-550 card background-primary mx-2 mb-2 w-full max-w-sm border hover:-translate-y-1 hover:scale-105 hover:bg-neutral-200 hover:transition hover:duration-1000 hover:ease-in-out"
+	class="hover:delay-550 card background-primary mx-2 mb-2 w-full max-w-sm border hover:-translate-y-1 hover:scale-120 hover:bg-neutral-200 hover:transition hover:duration-1000 hover:ease-in-out"
 >
 	<div class="card-body">
 		<h4 class="card-title text-primary">
