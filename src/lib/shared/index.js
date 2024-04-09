@@ -17,7 +17,23 @@ import colorSchemes from './utils/svelteThemes/constantColorSchemes.ts';
 import replaceLocaleInUrl from './utils/replaceLocaleInUrl.ts';
 import toggleTheme from './utils/toggleTheme.ts';
 
+// ui
+import FullBtn from './ui/FullBtn.svelte';
+import EmailLink from './ui/EmailLink.svelte';
+import SocialLink from './ui/SocialLink.svelte';
+
+// data
+import magnets from './data/magnets';
+import news from './data/news';
+import projects from './data/projects';
+
 export {
+	magnets,
+	SocialLink,
+	FullBtn,
+	EmailLink,
+	news,
+	projects,
 	replaceLocaleInUrl,
 	toggleTheme,
 	HeadHrefLangs,
