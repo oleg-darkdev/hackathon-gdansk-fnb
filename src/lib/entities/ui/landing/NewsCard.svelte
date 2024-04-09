@@ -14,5 +14,5 @@
 			{data.desc}
 		</p>
 	</div>
-	<img src="./images/news/{data.img}" class="max-h-[450px] grayscale filter" alt="" />
+	<img src="./images/news/{data.img}" class="max-h-[450px] min-h-[400px] grayscale filter" alt="" />
 </div>
