@@ -10,9 +10,11 @@ import magnets from './data/magnets';
 import news from './data/news';
 import projects from './data/projects';
 import navLinks from './data/navLinks';
+import about from './data/about';
 
 export {
-	magnets,
+  magnets,
+  about,
 	DonateBtn,
 	SocialLink,
 	navLinks,
@@ -20,5 +22,5 @@ export {
 	EmailLink,
 	news,
 	projects,
-	
+
 };
