@@ -4,7 +4,7 @@
 </script>
 
 
-<div class="body">
+<div class="body bg-neutral-100">
 	<slot />
 </div>
 
@@ -15,7 +15,7 @@
 	}
 
 	.body {
-		background: #e2dccc;
+		/* background: #e2dccc; */
 		line-height: 1.2;
 		padding: 0 0.3rem 2rem 0.3rem ;
 	}
