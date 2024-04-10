@@ -4,8 +4,8 @@
 
 <div class="legend">
 	{#each links as link, i}
-		<a class='' href={link.link}>
-			<div class="legend__item"><i>{i + 1}</i><span >{link.title}</span></div>
+		<a class="" href={link.link}>
+			<div class="legend__item"><i>{i + 1}</i><span>{link.title}</span></div>
 		</a>
 	{/each}
 </div>
@@ -39,11 +39,11 @@
 		height: 40px;
 		text-transform: uppercase;
 		font-weight: 500;
-				font-size: 1.5rem;
+		font-size: 1.5rem;
 
 		padding: 12px 20px 12px 12px;
 		flex: auto;
-		color: #000;
+		color: #04110f;
 	}
 	.legend__item i {
 		display: inline-block;
@@ -63,7 +63,7 @@
 	}
 	.legend__item:nth-child(1) i {
 		/* background: #00acc1; */
-		background: #000;
+		background: #04110f;
 	}
 	.legend__item:nth-child(2) {
 		color: #931a47;

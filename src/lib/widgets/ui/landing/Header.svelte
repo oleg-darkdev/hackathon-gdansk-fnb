@@ -11,13 +11,21 @@
 	<div class="opening-hours">
 		Gorącą zupę rozdajemy o 12:00.
 		<br />
-		<a class=" hover:border-b-2 hover:border-black text-black" href="https://maps.app.goo.gl/awbGNCfjkpkRVQRXA" target="_blank">Przy fontannie Neptuna</a
+		<a
+			class=" text-[#04110f] hover:border-b-2 hover:border-[#04110f]"
+			href="https://maps.app.goo.gl/awbGNCfjkpkRVQRXA"
+			target="_blank">Przy fontannie Neptuna</a
 		>
 	</div>
 
 	<div class="location flex flex-col items-center justify-center">
-		<p class="w-full text-center hover:delay-550 hover:-translate-y-1 hover:scale-105  hover:transition hover:duration-1000 hover:ease-in-out  ">fnbgdansk@zieloni.pl</p>
-		<div class="mx-auto flex w-full max-w-[230px] flex-row justify-between">
+		<a
+			href="mailto:fnbgdansk@zieloni.pl"
+			target="_blank"
+			class="hover:delay-550 mb-2 w-full cursor-pointer text-center text-2xl text-[#dec022] hover:-translate-y-1 hover:scale-105 hover:transition hover:duration-1000 hover:ease-in-out"
+			>fnbgdansk@zieloni.pl</a
+		>
+		<div class="mx-auto mb-4 flex w-full max-w-[230px] flex-row justify-between">
 			<SocialLink
 				bg={'background-primary'}
 				link="https://www.facebook.com/FNBgdansk/"
@@ -26,7 +34,7 @@
 			<EmailLink bg={'background-primary'} />
 		</div>
 	</div>
-	<div class="special-announcements" />
+	<!-- <div class="special-announcements" /> -->
 </header>
 
 <style>
