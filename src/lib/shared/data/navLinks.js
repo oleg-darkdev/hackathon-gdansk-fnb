@@ -1,22 +1,23 @@
 const links = [
 	{
-		title: 'News',
+		title: 'O nas',
+		link: '#about'
+	},
+	{
+		title: 'Aktualności',
 		link: '#news'
 	},
 	{
-		title: 'Other projects',
+		title: 'Inne projekty',
 		link: '#projects'
 	},
 	{
-		title: 'Support us',
+		title: 'Wesprzyj nas',
 		link: '#support'
 	},
+
 	{
-		title: 'Our team',
-		link: '#support'
-	},
-	{
-		title: 'Contact',
+		title: 'Kontakt',
 		link: '#contact'
 	}
 ];
