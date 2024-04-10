@@ -19,7 +19,7 @@
 	.body {
 		background: #e2dccc;
 		line-height: 1.2;
-		padding: 1rem;
+		padding: 0.3rem;
 	}
 	@media (min-width: 880px) {
 		.body {
