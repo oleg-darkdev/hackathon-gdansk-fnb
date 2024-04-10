@@ -7,9 +7,9 @@
 	<a name="about" />
 
 	<div class="flex items-center justify-center">
-		<Carousel bullets={false} interval={1800}>
+		<Carousel class='' bullets={false} interval={1800}>
 			{#each about as text}
-				<CarouselItem style="">
+				<CarouselItem class='' style="">
 					<div style="" class="slide-wrap hero hero-default hero-secondary border">
 						<div class="hero-body">
 							<h2 class="hero-title text-3xl md:text-4xl lg:text-5xl">{text}</h2>

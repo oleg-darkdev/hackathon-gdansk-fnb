@@ -37,7 +37,7 @@
 </script>
 
 <svelte:head>
-	<title>Food Not Bombs - Gdans</title>
+	<title>Food Not Bombs - Gdańsk</title>
 </svelte:head>
 `
 
@@ -59,7 +59,7 @@
 
 			<div
 				on:click={loadMore}
-				class="hover:delay-550 m-4 flex min-h-[350px] max-w-sm items-center hover:-translate-y-1 hover:scale-105 hover:transition hover:duration-1000 hover:ease-in-out"
+				class="hover:delay-550 m-4 mb-10 flex max-w-sm items-center hover:-translate-y-1 hover:scale-105 hover:transition hover:duration-1000 hover:ease-in-out lg:min-h-[350px] xl:min-h-[350px]"
 			>
 				{#if hideMoreBtn}
 					<FullBtn on:click={loadMore} text="Pokaż więcej newsów" />
@@ -70,7 +70,9 @@
 			<!-- <a name="" /> -->
 
 			<h3 class="">Wspieraj nas</h3>
-			<h4 class="mb-2 px-2">Wspieraj nas - kupując nasze drewniane magnesy na lodówkę!</h4>
+			<h4 class="mb-2 px-2 ">
+				Wspieraj nas - kupując nasze drewniane magnesy na lodówkę!
+			</h4>
 
 			{#each visibleMagnets as magnet}
 				<MagnetCard {magnet} />
@@ -121,6 +123,9 @@
 
 	@media (max-width: 550px) {
 		h3 {
+			text-align: center;
+		}
+    h4 {
 			text-align: center;
 		}
 	}

@@ -2,10 +2,13 @@
 	export let data;
 </script>
 
+	<!-- style="border: 2px solid #41403e !important; 		box-shadow: 0 0 0 6px #dec022;" -->
+<!--  -->
 <div
-	class="hover:delay-550 card m-4 max-w-sm border hover:-translate-y-1 hover:scale-105 hover:bg-white hover:transition hover:duration-1000 hover:ease-in-out"
+style='border: 2px solid #41403e !important;'
+	class="hover:delay-550 card overflow-y-hidden background-primary mx-4 my-3 max-w-sm border  hover:-translate-y-1 hover:scale-105 hover:bg-neutral-200 hover:transition hover:duration-1000 hover:ease-in-out"
 >
-	<div class="card-body background-primary">
+	<div class="card-body">
 		<h5 style="margin-bottom:20px; " class="card-subtitle">{data.date}</h5>
 
 		<h4 class="card-title text-primary">{data.title}</h4>
