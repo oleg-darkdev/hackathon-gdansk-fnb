@@ -1,47 +1,40 @@
 <script>
-	import { Carousel, CarouselItem, Hero } from 'spaper';
-
-	const data = [
-		'Działamy na terenie Gdańska od 2004 roku.',
-		'Przygotowaliśmy ponad 7000 litrów zupy i 2000 litrów herbaty.',
-		'Nasz zespół składa się z osób różnych narodowości.',
-		'Możesz wesprzeć nasze działania w kolejnym bloku.'
-	];
+	import { Carousel, CarouselItem } from 'spaper';
+	import { about } from '$shared';
 </script>
 
-<div class="p-10">
-	<Carousel bullets={false} interval={1800}>
-		{#each data as text}
-			<CarouselItem style="">
-				<div
-					style=""
-					class="slide-wrap hero hero-default hero-secondary border"
-				>
-					<div class="hero-body">
-						<h2 class="hero-title lg:text-5xl text-3xl md:text-4xl">{text}</h2>
-						<!-- <p class="hero-text-lead ">{text}</p> -->
-						<div />
+<div class="w-full py-6 lg:p-10 xl:p-10">
+	<a name="about" />
+
+	<div class="flex items-center justify-center">
+		<Carousel bullets={false} interval={1800}>
+			{#each about as text}
+				<CarouselItem style="">
+					<div style="" class="slide-wrap hero hero-default hero-secondary border">
+						<div class="hero-body">
+							<h2 class="hero-title text-3xl md:text-4xl lg:text-5xl">{text}</h2>
+							<div />
+						</div>
 					</div>
-				</div>
-			</CarouselItem>
-		{/each}
-	</Carousel>
+				</CarouselItem>
+			{/each}
+		</Carousel>
+	</div>
 </div>
 
-
 <style>
-  @media (min-width: 800px) {
+	@media (min-width: 800px) {
 		.slide-wrap {
-      width: 450px;
-      height: 450px;
-      padding: 2rem 3rem;
-    }
+			width: 450px;
+			height: 450px;
+			padding: 2rem 3rem;
+		}
 	}
-  @media (max-width: 800px) {
+	@media (max-width: 800px) {
 		.slide-wrap {
-      width: 270px;
-      height: 260px;
-      padding: 0.6rem 1rem;
-    }
+			width: 300px;
+			height: 280px;
+			padding: 0.6rem 1rem;
+		}
 	}
 </style>
